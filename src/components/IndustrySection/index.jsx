@@ -1,5 +1,5 @@
-import React from 'react'
-import './IndustrySection.scss'
+import React from "react";
+import "./IndustrySection.scss";
 import { LiaBoxSolid } from "react-icons/lia";
 import { FaArrowRight } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
@@ -8,45 +8,53 @@ import { RiGraduationCapFill } from "react-icons/ri";
 
 function IndustrySection() {
   return (
-    <section id='industrySection'>
- <div className="upBox">
- <span>INDUSTRY WE OFFER</span>
-      <h3>Managed IT services customized for your industry</h3>
-      <p>We understand the complexities of modern markets and translate them into real business solutions for automotive, financial, insurance, pharma & life sciences,</p>
- </div>
- <div className="downBox">
-  <div className="cart">
-  <div className="hoverBox"></div>
+    <section id="industrySection">
+      <div className="upBox">
+        <span>Service</span>
+        <h3>Innovative Solutions. Reliable Support</h3>
+        <p>
+          At ITlock, we provide a wide range of IT solutions designed to
+          optimize your business operations. From system integration and network
+          management to IT support, we keep your technology running smoothly and
+          efficiently so you can focus on growing.
+        </p>
+      </div>
+      <div className="downBox">
+        <div className="cart">
+          <div className="hoverBox"></div>
 
-  <div className="icon"><LiaBoxSolid /></div>
-  <p>Industries & Manufacturing</p>
-  <button>Find Out More <FaArrowRight /></button>
-  </div>
-  <div className="cart">
-  <div className="hoverBox"></div>
+          <div className="icon">
+            <LiaBoxSolid />
+          </div>
+          <p>Industries & Manufacturing</p>
+        </div>
+        <div className="cart">
+          <div className="hoverBox"></div>
 
-  <div className="icon"><IoCartOutline /></div>
-  <p>Industries & Manufacturing</p>
-  <button>Find Out More <FaArrowRight /></button>
-  </div>
-  <div className="cart">
-  <div className="hoverBox"></div>
+          <div className="icon">
+            <IoCartOutline />
+          </div>
+          <p>Industries & Manufacturing</p>
+        </div>
+        <div className="cart">
+          <div className="hoverBox"></div>
 
-  <div className="icon"><LuPlane /></div>
-  <p>Industries & Manufacturing</p>
-  <button>Find Out More <FaArrowRight /></button>
-  </div>
-  <div className="cart">
-  <div className="hoverBox"></div>
+          <div className="icon">
+            <LuPlane />
+          </div>
+          <p>Industries & Manufacturing</p>
+        </div>
+        <div className="cart">
+          <div className="hoverBox"></div>
 
-  <div className="icon"><RiGraduationCapFill /></div>
-  <p>Industries & Manufacturing</p>
-  <button>Find Out More <FaArrowRight /></button>
-  </div>
-
- </div>
+          <div className="icon">
+            <RiGraduationCapFill />
+          </div>
+          <p>Industries & Manufacturing</p>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
 
-export default IndustrySection
+export default IndustrySection;

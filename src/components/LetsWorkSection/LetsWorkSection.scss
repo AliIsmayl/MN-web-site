@@ -1,65 +1,103 @@
 @mixin MyFlex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 //   @include MyFlex();
+@font-face {
+  font-family: "Barlow-Bold";
+  src: url("../../../font/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Barlow-SemiBold";
+  src: url("../../../font/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Barlow-Medium";
+  src: url("../../../font/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Barlow-Regular";
+  src: url("../../../font/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Barlow-Light";
+  src: url("../../../font/Poppins-Light.ttf");
+}
 #letsWorkSection {
-    padding: 50px 10px;
-    @include MyFlex();
-    flex-direction: column;
-    color: white;
-    background-color: #104680;
-    text-align: center;
-    gap: 30px;
+  padding: 50px 10px;
+  @include MyFlex();
+  flex-direction: column;
+  color: white;
+  background-color: #104680;
+  text-align: center;
+  gap: 30px;
 
-    h1 {
-        font-size: 40px;
+  h1 {
+  font-family: "Barlow-SemiBold";
+    font-size: 40px;
+  }
+
+  p {
+    max-width: 600px;
+  font-family: "Barlow-Regular";
+    font-size: 18px;
+  }
+
+  button {
+    background-color: #316ec2;
+    width: 200px;
+    height: 55px;
+    max-width: 100%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+
+    span {
+      color: white;
+      z-index: 3;
+      position: absolute;
+      top: 17px;
+      left: 28px;
     }
 
     p {
-        max-width: 600px;
+      transition: 0.6s;
+
+      background-color: #568cd7;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0px;
+      z-index: 2;
+    }
+  }
+
+  .normalBox {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    @include MyFlex();
+    font-family: "Barlow-Regular";
+
+    padding: 20px;
+    .iconBox {
+      display: flex;
+      gap: 10px;
+      .icon {
+        @include MyFlex();
         font-size: 20px;
+      }
     }
+  }
+  button:hover {
+    p {
+      transition: 0.6s;
 
-    button {
-        background-color: #316EC2;
-        width: 200px;
-        height: 55px;
-        max-width: 100%;
-        border: none;
-        cursor: pointer;
-        position: relative;
-        font-size: 20px;
-
-        span {
-            color: white;
-            z-index: 3;
-            position: absolute;
-            top: 17px;
-            left: 28px;
-        }
-
-        p {
-            transition: 0.6s;
-
-            background-color: #568CD7;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 0px;
-            z-index: 2;
-        }
+      width: 100%;
     }
-
-    button:hover {
-
-        p {
-            transition: 0.6s;
-
-            width: 100%;
-        }
-    }
+  }
 }

@@ -1,239 +1,257 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @mixin MyFlex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 //   @include MyFlex();
-.allNavbar{
-    position: fixed;
-    width: 100%;
-    z-index: 5;
+@font-face {
+  font-family: "Barlow-Bold";
+  src: url("../../../font/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Barlow-SemiBold";
+  src: url("../../../font/Barlow-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Barlow-Medium";
+  src: url("../../../font/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Barlow-Regular";
+  src: url("../../../font/Barlow-Regular.ttf");
+}
+@font-face {
+  font-family: "Barlow-Light";
+  src: url("../../../font/Poppins-Light.ttf");
+}
 
+.allNavbar {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
 }
 .upText {
-    background-color: white;
-    width: 100%;
-    @include MyFlex();
-    justify-content: space-between;
-    padding: 20px 30px;
-    border-bottom: 1px solid #002e7a;
-gap: 10px;
+  background-color: white;
+  width: 100%;
+  @include MyFlex();
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-bottom: 1px solid #002e7a;
+  gap: 10px;
+
+  p {
+    color: #002e7a;
+
+    span {
+      color: #0d6ce1;
+    }
+  }
+
+  .icons {
+    display: flex;
+    gap: 20px;
+
     p {
-        color: #002e7a;
-
-        span {
-            color: #0d6ce1;
-        }
+      cursor: pointer;
+      transition: 0.7s;
     }
 
-    .icons {
-        display: flex;
-        gap: 20px;
-
-        p {
-            cursor: pointer;
-            transition: 0.7s;
-
-        }
-
-        p:hover {
-            transform: rotateY(180deg);
-            transition: 0.7s;
-        }
+    p:hover {
+      transform: rotateY(180deg);
+      transition: 0.7s;
     }
+  }
 }
 
 nav {
+  display: flex;
+  background-color: white;
+  @include MyFlex();
+  gap: 40px;
+  padding: 20px 100px;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  font-family: "Barlow-Light";
+  img {
+    max-width: 100px;
+  }
+  ul {
+    font-size: 25px;
     display: flex;
-    background-color: white;
-    @include MyFlex();
-    gap: 40px;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    justify-content: space-between;
-
-    ul {
-        font-size: 25px;
-        display: flex;
-        list-style: none;
-        gap: 20px;
-
-        .link {
-            color: #002e7a;
-            text-decoration: none;
-            position: relative;
-            .line{
-                background-color: #F3F8FF;
-                height: 20px;
-                width: 20px;
-                border-radius: 50%;
-                position: absolute;
-                top: 0px;
-                right: -10px;
-    @include MyFlex();
-                border: 1px solid #002e7a;
-                p{
-                    font-size: 17px;
-                }
-            }
-        }
+    list-style: none;
+    gap: 20px;
+    li {
+      cursor: pointer;
     }
 
-    .leftBox {
-        display: flex;
-        gap: 15px;
-
-        button {
-            padding: 15px 30px;
-            border: 1px solid #002e7a;
-            transition: 0.3s;
-            color: #002e7a;
-            background-color: transparent;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #002e7a;
-            transition: 0.3s;
-            color: white;
-        }
-
-        .informBox {
-            @include MyFlex();
-            gap: 10px;
-
-            .icon {
-                font-size: 40px;
-                color: #002e7a;
-            }
-
-            .textBox {
-                color: #002e7a;
-                display: flex;
-                flex-direction: column;
-
-                p {
-                    color: gray;
-                }
-            }
-
-        }
-    }
-    .menuBox{
-        padding: 10px 40px;
-        display: none;
-        width: 100%;
-        top: 90px;
-        left: 0;
-        gap: 10px;
-        p{
-            font-size: 20px;
-            @include MyFlex();
-background-color: #222;
-padding: 1px 8px;
-border-radius: 5px;
-color: white;
-        }
-    }
-    .respNavbar{
-        display: none;
-        background-color: #4c4c4c;
-        width: 100%;
+    .link {
+      color: #002e7a;
+      text-decoration: none;
+      position: relative;
+      .line {
+        background-color: #f3f8ff;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
         position: absolute;
-        top: 150px;
-        left: 0px;
-        ul{
-            padding: 20px ;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            li{
-                .link{
-                    color: white;
-                    font-size: 17px;
-                   
-                }
-               
-               
-            }
+        top: 0px;
+        right: -10px;
+        @include MyFlex();
+        border: 1px solid #002e7a;
+        p {
+          font-size: 17px;
         }
+      }
     }
-    .openNavbar{
-        display: block;
+  }
+
+  .leftBox {
+    display: flex;
+    gap: 15px;
+
+    button {
+      padding: 15px 30px;
+      border: 1px solid #002e7a;
+      transition: 0.3s;
+      color: #002e7a;
+      background-color: transparent;
+      font-size: 20px;
+      cursor: pointer;
     }
+
+    button:hover {
+      background-color: #002e7a;
+      transition: 0.3s;
+      color: white;
+    }
+
+    .informBox {
+      @include MyFlex();
+      gap: 10px;
+
+      .icon {
+        font-size: 40px;
+        color: #002e7a;
+      }
+
+      .textBox {
+        color: #002e7a;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          color: gray;
+        }
+      }
+    }
+  }
+  .menuBox {
+    padding: 10px 40px;
+    display: none;
+    width: 100%;
+    top: 90px;
+    left: 0;
+    gap: 10px;
+    p {
+      font-size: 20px;
+      @include MyFlex();
+      background-color: #222;
+      padding: 1px 8px;
+      border-radius: 5px;
+      color: white;
+    }
+  }
+  .respNavbar {
+    display: none;
+    background-color: #4c4c4c;
+    width: 100%;
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    ul {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        .link {
+          color: white;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+  .openNavbar {
+    display: block;
+  }
 }
 
-
 @media only screen and (max-width: 1125px) {
-    nav {
-        .leftBox {
-            display: flex;
-            gap: 15px;
+  nav {
+    .leftBox {
+      display: flex;
+      gap: 15px;
 
-            button {
-                display: none;
-            }
-        }
+      button {
+        display: none;
+      }
     }
+  }
 }
 
 @media only screen and (max-width: 938px) {
-    .upText {
-        display: none;
-        padding:20px 10px;
-        p {
-            color: #002e7a;
-    font-size: 14px;
-        }
-        .icons {
-            gap: 10px;
-    
-            p {
-                cursor: pointer;
-                transition: 0.7s;
-    
-            }
-    
-            p:hover {
-                transform: rotateY(180deg);
-                transition: 0.7s;
-            }
-        }
+  .upText {
+    display: none;
+    padding: 20px 10px;
+    p {
+      color: #002e7a;
+      font-size: 14px;
     }
-    nav {
-        padding: 20px 10px;
+    .icons {
+      gap: 10px;
 
-        ul {
-            display: none;
-        }
+      p {
+        cursor: pointer;
+        transition: 0.7s;
+      }
 
-        .leftBox {
-            .informBox {
-                .icon {
-                    font-size: 30px;
-                }
-                .textBox {
-    font-size: 10px;
-                }
-    
-            }
-        }
-        .menuBox{
-            position: absolute;
-            @include MyFlex();
-            justify-content: end;
-            background-color: #4c4c4c;
-            z-index: 2;
-            
-        }
+      p:hover {
+        transform: rotateY(180deg);
+        transition: 0.7s;
+      }
     }
+  }
+  nav {
+    padding: 20px 10px;
+
+    ul {
+      display: none;
+    }
+
+    .leftBox {
+      .informBox {
+        .icon {
+          font-size: 30px;
+        }
+        .textBox {
+          font-size: 10px;
+        }
+      }
+    }
+    .menuBox {
+      position: absolute;
+      @include MyFlex();
+      justify-content: end;
+      background-color: #4c4c4c;
+      z-index: 2;
+    }
+  }
 }

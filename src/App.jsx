@@ -20,7 +20,7 @@ function App() {
    <Navbar/>
     <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/about" element={<AboutPage/>} />
+        {/* <Route path="/about" element={<AboutPage/>} />
         <Route path="/services" element={<ServicesPage/>} />
         <Route path="/case" element={<CasePage/>} />
         <Route path="/blog" element={<BlogPage/>} />
@@ -28,7 +28,7 @@ function App() {
         <Route path="/add" element={<AddPage/>} />
         <Route path="/detail/:id" element={<DetailPage/>} />
         <Route path="/wishlist" element={<Wishlistpage/>} />
-        <Route path="/basket" element={<BasketPage/>} />
+        <Route path="/basket" element={<BasketPage/>} /> */}
       </Routes>
    <Footer/>
    </>

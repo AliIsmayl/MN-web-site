@@ -5,11 +5,32 @@
 }
 
 //   @include MyFlex();
+@font-face {
+    font-family: "Barlow-Bold";
+    src: url("../../../font/Poppins-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Barlow-SemiBold";
+    src: url("../../../font/Poppins-SemiBold.ttf");
+  }
+  @font-face {
+    font-family: "Barlow-Medium";
+    src: url("../../../font/Poppins-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Barlow-Regular";
+    src: url("../../../font/Poppins-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Barlow-Light";
+    src: url("../../../font/Poppins-Light.ttf");
+  }
 
 footer{
     padding: 30px 10px;
     border-top: 1px solid gray;
     text-align: center;
-    font-size: 20px;
+    font-family: "Barlow-SemiBold";
+    font-size: 18px;
     background-color: #ffffff;
 }
