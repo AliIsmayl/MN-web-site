@@ -1,0 +1,65 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+#letsWorkSection {
+    padding: 50px 10px;
+    @include MyFlex();
+    flex-direction: column;
+    color: white;
+    background-color: #104680;
+    text-align: center;
+    gap: 30px;
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        max-width: 600px;
+        font-size: 20px;
+    }
+
+    button {
+        background-color: #316EC2;
+        width: 200px;
+        height: 55px;
+        max-width: 100%;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        font-size: 20px;
+
+        span {
+            color: white;
+            z-index: 3;
+            position: absolute;
+            top: 17px;
+            left: 28px;
+        }
+
+        p {
+            transition: 0.6s;
+
+            background-color: #568CD7;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0px;
+            z-index: 2;
+        }
+    }
+
+    button:hover {
+
+        p {
+            transition: 0.6s;
+
+            width: 100%;
+        }
+    }
+}

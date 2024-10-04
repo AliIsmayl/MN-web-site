@@ -1,0 +1,24 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+.detailPage{
+    background:#F3F8FF;
+    height: 65vh;
+    @include MyFlex();
+    padding: 20px 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+    img{
+        max-width: 310px;
+    }
+    .textBox{
+        p{
+            font-size: 20px;
+            color: #104680;
+        }
+    }
+}

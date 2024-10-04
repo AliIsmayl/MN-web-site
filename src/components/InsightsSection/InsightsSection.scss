@@ -1,0 +1,77 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+#insightsSection {
+    @include MyFlex();
+    height: 90vh;
+    padding: 50px;
+
+    .leftBox {
+        width: 50%;
+        height: 100%;
+        color: white;
+        @include MyFlex();
+        background-color: #104680;
+        flex-direction: column;
+        align-items: start;
+        padding: 50px;
+        gap: 20px;
+
+        h1 {
+            font-size: 40px;
+            max-width: 500px;
+        }
+
+        p {
+            max-width: 500px;
+        }
+
+        button {
+            padding: 15px 35px;
+            border: 2px solid white;
+            cursor: pointer;
+            color: white;
+            background-color: transparent;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-color: #316ec2;
+            transition: 0.5s;
+            border: 2px solid #316ec2;
+
+        }
+    }
+
+    .rightBox {
+        background-image: url(https://preview.colorlib.com/theme/itlock/assets/img/gallery/about1.jpg);
+        height: 100%;
+        width: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 746px) {
+    #insightsSection {
+        padding: 10px;
+        flex-direction: column;
+
+        .leftBox {
+            width: 100%;
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        .rightBox {
+            width: 100%;
+        }
+    }
+}

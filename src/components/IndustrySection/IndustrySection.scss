@@ -1,0 +1,108 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+
+#industrySection {
+    background-color: #ffffff;
+    padding: 30px 10px;
+
+    .upBox {
+        @include MyFlex();
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+
+        span {
+            color: #7985c8;
+        }
+
+        h3 {
+            font-size: 40px;
+            color: #002E7A;
+        }
+
+        p {
+            font-size: 17px;
+            color: #4f546f;
+            max-width: 700px;
+        }
+    }
+
+    .downBox {
+        display: flex;
+        gap: 20px;
+        @include MyFlex();
+        padding: 40px 20px;
+flex-wrap: wrap;
+        .cart {
+            background-color: #f3f8ff;
+            width: 310px;
+            position: relative;
+            padding: 40px;
+            @include MyFlex();
+            flex-direction: column;
+            gap: 10px;
+
+            .hoverBox {
+                background-color: white;
+                width: 100%;
+                height: 0px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+                transition: 0.5s;
+
+            }
+
+            .icon {
+                @include MyFlex();
+z-index: 2;
+                font-size: 70px;
+                color: #002E7A;
+            }
+
+            p {
+z-index: 2;
+
+                font-size: 27px;
+                color: #104680;
+                text-align: center;
+                max-width: 180px;
+            }
+
+            button {
+                margin-top: 10px;
+                background-color: transparent;
+                color: #104680;
+                border: none;
+                cursor: pointer;
+                font-size: 20px;
+                @include MyFlex();
+                opacity: 0;
+                gap: 5px;
+                transition: 0.5s;
+                z-index: 2;
+
+            }
+
+
+        }
+
+        .cart:hover {
+            button {
+                transition: 0.5s;
+                opacity: 1;
+            }
+            .hoverBox{
+                height: 100%;
+                transition: 0.5s;
+
+            }
+        }
+    }
+}

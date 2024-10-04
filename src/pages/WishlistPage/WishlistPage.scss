@@ -1,0 +1,45 @@
+
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+.wishlistPage{
+    background-color: #F3F8FF;
+    padding: 80px 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include MyFlex();
+    position: relative;
+    img{
+        max-width: 310px;
+    }
+    .TextAndBtnBox{
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+    p{
+        font-size: 17px;
+        color: #316EC2;
+
+    }
+    button{
+        padding: 3px;
+        font-size: 25px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: #104680;
+
+    }
+    .deleteBtn{
+        font-size: 20px;
+        position: absolute;
+        top: 50px;
+        left: 5px;
+    }
+}

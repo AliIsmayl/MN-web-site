@@ -1,0 +1,54 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+.BasketPage {
+    padding: 100px 50px;
+    @include MyFlex();
+    flex-wrap: wrap;
+    gap: 50px;
+    position: relative;
+.basketDeleteBtn{
+    background: transparent;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #104680;
+
+}
+.subtotal{
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+}
+    .basketCart {
+        width: 300px;
+
+        img {
+            max-width: 300px;
+        }
+
+        .count {
+            display: flex;
+            gap: 5px;
+            @include MyFlex();
+            font-size: 20px;
+            justify-content: start;
+
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                font-size: 20px;
+
+            }
+        }
+    }
+}

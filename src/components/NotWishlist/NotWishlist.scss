@@ -1,0 +1,21 @@
+
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+#notWishlist{
+    text-align: center;
+    font-size: 50px;
+    @include MyFlex();
+    flex-direction: column;
+    color: #104680;
+    gap: 20px;
+    height: 45vh;
+    .link{
+        color: black;
+font-size: 30px;
+    }
+}

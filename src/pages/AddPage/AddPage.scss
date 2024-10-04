@@ -1,0 +1,108 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+#addPage {
+    background-color: #F3F8FF;
+    padding: 50px;
+    @include MyFlex();
+    flex-direction: column;
+    gap: 100px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+        input {
+            height: 38px;
+
+        }
+
+        button {
+            padding: 12px 20px;
+            cursor: pointer;
+            background-color: #104680;
+            color: white;
+            border: none;
+        }
+
+        .error {
+            color: red;
+        }
+    }
+
+    table {
+        thead {
+            tr {
+                th {
+                    border: 2px solid #104680;
+
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    border: 2px solid #104680;
+                    // max-width: 100px;
+                    button {
+                        background-color: red;
+                        border: none;
+                        color: white;
+                        cursor: pointer;
+                        padding: 10px 2px;
+                    }
+                    img {
+                        max-width: 150px;
+                        @include MyFlex();
+
+                      
+                    }
+                }
+            }
+        }
+    }
+    .searchBox{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        input{
+            width: 280px;
+            height: 37px;
+            border: 2px solid #104680;
+            padding: 0px 20px;
+        }
+        .btnsBox{
+            display: flex;
+            justify-content: space-between;
+            button{
+                background-color: #104680;
+                color: white;
+                padding: 10px ;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 693px) {
+   #addPage{
+        table {
+        tbody {
+            tr {
+                td {
+                    img {
+                        max-width: 60px;
+                      
+                    }
+                }
+            }
+        }
+    }
+   }
+
+}
