@@ -9,22 +9,27 @@
   font-family: "Barlow-Bold";
   src: url("../../../font/Poppins-Bold.ttf");
 }
+
 @font-face {
   font-family: "Barlow-SemiBold";
   src: url("../../../font/Poppins-SemiBold.ttf");
 }
+
 @font-face {
   font-family: "Barlow-Medium";
   src: url("../../../font/Poppins-Bold.ttf");
 }
+
 @font-face {
   font-family: "Barlow-Regular";
   src: url("../../../font/Poppins-Regular.ttf");
 }
+
 @font-face {
   font-family: "Barlow-Light";
   src: url("../../../font/Poppins-Light.ttf");
 }
+
 #industrySection {
   background-color: #ffffff;
   padding: 30px 10px;
@@ -63,40 +68,42 @@
     @include MyFlex();
     padding: 40px 20px;
     flex-wrap: wrap;
+
     .cart {
       background-color: #f3f8ff;
-      width: 310px;
+      width: 410px;
+      min-height: 500px;
       position: relative;
-      padding: 40px;
+      padding: 20px 10px;
       @include MyFlex();
+      align-items: start;
+      justify-content: start;
       flex-direction: column;
       gap: 10px;
+      border: 2px solid transparent;
 
-      .hoverBox {
-        background-color: white;
-        width: 100%;
-        height: 0px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-
-        transition: 0.5s;
-      }
 
       .icon {
-        @include MyFlex();
-        z-index: 2;
-        font-size: 70px;
-        color: #002e7a;
+
+        img {
+          max-width: 30px;
+        }
       }
 
       p {
         z-index: 2;
-
-        font-size: 27px;
+        font-family: "Barlow-Medium";
+        font-size: 23px;
         color: #104680;
+        text-align: left;
+      }
+
+      span {
+        z-index: 2;
         text-align: center;
-        max-width: 180px;
+        font-family: "Barlow-Light";
+        text-align: left;
+
       }
 
       button {
@@ -119,9 +126,21 @@
         transition: 0.5s;
         opacity: 1;
       }
-      .hoverBox {
-        height: 100%;
-        transition: 0.5s;
+
+      border: 2px solid #5f697996;
+
+
+    }
+  }
+}
+
+@media only screen and (max-width: 581px) {
+  #industrySection {
+    .downBox {
+      .cart {
+        background-color: #f3f8ff;
+        width: 310px;
+        min-height: 300px;
       }
     }
   }
