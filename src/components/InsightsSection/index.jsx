@@ -1,5 +1,6 @@
 import React from "react";
 import "./InsightsSection.scss";
+import Image from '../../../img/LittleImage.png'
 
 function InsightsSection() {
   return (
@@ -20,7 +21,7 @@ function InsightsSection() {
           help businesses learn and harness the full potential of technology.
         </p>
       </div>
-      <div className="rightBox"></div>
+      <div className="rightBox" style={{ backgroundImage: `url(${Image})` }}></div>
     </section>
   );
 }
