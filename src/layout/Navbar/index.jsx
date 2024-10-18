@@ -3,6 +3,7 @@ import { IoMdMenu } from "react-icons/io";
 import "./Navbar.scss";
 import { Link as ScrollLink } from "react-scroll";
 import Logo from "../../../img/Logo.png";
+import { IoMdClose } from "react-icons/io";
 
 function Navbar() {
   const [openNavbar, setOpenNavbar] = useState(false);
@@ -43,19 +44,36 @@ function Navbar() {
         </ul>
         <div className="menuBox" onClick={handleOpenNavbar}>
           <p>
-            Menu <IoMdMenu style={{ fontSize: "40px" }} />
+            {openNavbar ? (
+              <IoMdClose style={{ fontSize: "40px" }} />
+            ) : (
+              <IoMdMenu style={{ fontSize: "40px" }} />
+            )}
           </p>
         </div>
         <div className={`respNavbar ${openNavbar ? "openNavbar" : ""}`}>
           <ul>
             <ul>
-              <ScrollLink to="Home" smooth={true} duration={500} offset={-50}>
+              <ScrollLink
+                onClick={handleOpenNavbar}
+                to="Home"
+                smooth={true}
+                duration={500}
+                offset={-50}
+              >
                 <li>Home</li>
               </ScrollLink>
-              <ScrollLink to="About" smooth={true} duration={500} offset={-50}>
+              <ScrollLink
+                onClick={handleOpenNavbar}
+                to="About"
+                smooth={true}
+                duration={500}
+                offset={-50}
+              >
                 <li>About</li>
               </ScrollLink>
               <ScrollLink
+                onClick={handleOpenNavbar}
                 to="Service"
                 smooth={true}
                 duration={500}
@@ -64,6 +82,7 @@ function Navbar() {
                 <li>Service</li>
               </ScrollLink>
               <ScrollLink
+                onClick={handleOpenNavbar}
                 to="Contact"
                 smooth={true}
                 duration={500}

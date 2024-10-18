@@ -156,14 +156,14 @@ nav {
   .menuBox {
     padding: 10px 40px;
     display: none;
-    width: 100%;
-    top: 90px;
-    left: 0;
+    width: 200px;
+    top: 10px;
+    right: 0;
     gap: 10px;
     p {
       font-size: 20px;
       @include MyFlex();
-      background-color: #222;
+      background-color: #0d6ce1;
       padding: 1px 8px;
       border-radius: 5px;
       color: white;
@@ -171,10 +171,10 @@ nav {
   }
   .respNavbar {
     display: none;
-    background-color: #4c4c4c;
+    background-color: #0d6ce1;
     width: 100%;
     position: absolute;
-    top: 150px;
+    top: 90px;
     left: 0px;
     ul {
       padding: 20px;
@@ -182,10 +182,7 @@ nav {
       flex-direction: column;
       gap: 10px;
       li {
-        .link {
-          color: white;
-          font-size: 17px;
-        }
+          color: white !important;
       }
     }
   }
@@ -250,7 +247,6 @@ nav {
       position: absolute;
       @include MyFlex();
       justify-content: end;
-      background-color: #4c4c4c;
       z-index: 2;
     }
   }
