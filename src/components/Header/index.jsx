@@ -1,10 +1,10 @@
 import React from "react";
 import "./Header.scss";
-import Image from '../../../img/BiggerImage.webp'
+import Image from '../../../img/BiggerImage.png'
 function Header() {
   return (
     <header style={{ backgroundImage: `url(${Image})` }}>
-      <h1>Transforming Your Digital Future</h1>
+      <h1>International Consulting and IT Services</h1>
       <div className="line"></div>
       <p>
         We provide innovative technology solutions that streamline operations
