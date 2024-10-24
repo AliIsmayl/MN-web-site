@@ -47,14 +47,14 @@ function IndustrySection() {
           <div className="icon">
             <img src={Image3} alt="" />
           </div>
-          <p>Implementation and Technical Support of SAP Systems</p>
+          <p style={{maxWidth:"350px"}}>Implementation and Technical Support of SAP Systems</p>
           <span>We offer complete solutions for the implementation and support of SAP systems, ensuring they integrate smoothly with your existing business processes. Our specialists oversee every phase of SAP deployment, including setup, configuration, and personalized enhancements for optimal performance. Following the implementation, we deliver continuous technical support to maintain system efficiency, manage upgrades, and resolve any issues. Rely on us to unlock the full potential of your SAP solutions and enhance your organizational effectiveness.</span>
         </div>
         <div className="cart">
           <div className="icon">
             <img src={Image4} alt="" />
           </div>
-          <p>Software Development</p>
+          <p style={{maxWidth:"200px"}}>Software Development</p>
           <span>We specialize in delivering customized software development solutions that enhance operational efficiency. Our experienced team creates high-performance, scalable applications that prioritize both security and user experience. From enterprise software to mobile apps and cloud-based solutions, we focus on optimizing your software for reliability and future growth. Collaborate with us to harness innovative technology that drives your business forward.</span>
         </div>
         <div className="cart">
@@ -68,7 +68,7 @@ function IndustrySection() {
           <div className="icon">
             <img src={Image6} alt="" />
           </div>
-          <p>Project Management</p>
+          <p style={{maxWidth:"200px"}}>Project Management</p>
           <span>Effective project management is essential for the success of web design projects. Our approach involves setting clear objectives, creating strategic plans, and ensuring timely execution. By closely tracking progress and adapting to changes, we align our projects with client expectations. This structured yet flexible methodology guarantees a seamless experience from concept to completion, delivering user-centric websites</span>
         </div>
         <div className="cart">

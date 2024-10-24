@@ -1,6 +1,6 @@
 import React from "react";
 import "./InsightsSection.scss";
-import Image from '../../../img/LittleImage.png'
+import Image from '../../../img/LittleImage.webp'
 
 function InsightsSection() {
   return (

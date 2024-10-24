@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import Image from '../../../img/BiggerImage.png'
+import Image from '../../../img/BiggerImage.webp'
 function Header() {
   return (
     <header style={{ backgroundImage: `url(${Image})` }}>
